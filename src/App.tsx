@@ -179,7 +179,7 @@ function App() {
           </a>
         </div>
         <p className="font-semibold text-textSecondary">
-          Designed & Built with ❤️ by <a href="#" className="hover:underline bg-gradient-main bg-clip-text text-transparent">Aruthra S M</a> &bull; Technology &bull; Leadership &bull; Innovation
+          Technology &bull; Leadership &bull; Innovation
         </p>
         <p className="mt-2 text-[10px] text-textMuted">
           &copy; 2026 Aruthra S M. All rights reserved.

@@ -27,7 +27,7 @@ const PROJECTS: Project[] = [
     techs: ['IoT', 'Automation', 'Sensors', 'ESP32'],
     category: 'iot',
     github: 'https://github.com/Aruthra07/Smart-Hydroponics',
-    demo: 'https://aruthra785portfolio.my.canva.site',
+    demo: '#',
     icon: (
       <svg className="w-8 h-8 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M12 2v20M12 10a6 6 0 016-6M12 14a6 6 0 00-6-6M6 16a4 4 0 004 4M18 10a4 4 0 01-4 4" />
@@ -45,7 +45,7 @@ const PROJECTS: Project[] = [
     techs: ['RFID', 'Embedded Systems', 'Security', 'C/C++'],
     category: 'iot',
     github: 'https://github.com/Aruthra07',
-    demo: 'https://aruthra785portfolio.my.canva.site',
+    demo: '#',
     icon: (
       <svg className="w-8 h-8 text-accentCyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect x="5" y="11" width="14" height="10" rx="2" />
@@ -62,7 +62,7 @@ const PROJECTS: Project[] = [
     techs: ['IoT', 'Wearables', 'Safety Systems', 'GPS'],
     category: 'iot',
     github: 'https://github.com/Aruthra07',
-    demo: 'https://aruthra785portfolio.my.canva.site',
+    demo: '#',
     icon: (
       <svg className="w-8 h-8 text-accentPurple" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <circle cx="12" cy="12" r="4" />
@@ -78,7 +78,7 @@ const PROJECTS: Project[] = [
     techs: ['Python', 'AI/ML', 'Data Analytics', 'Pandas'],
     category: 'ai',
     github: 'https://github.com/Aruthra07/AI-Career-Recommendation',
-    demo: 'https://aruthra785portfolio.my.canva.site',
+    demo: '#',
     icon: (
       <svg className="w-8 h-8 text-accentPink" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M18 3a3 3 0 00-3 3c0 .8.3 1.5.8 2L11 11.8c-.5-.5-1.2-.8-2-.8a3 3 0 00-3 3c0 .8.3 1.5.8 2L3 21" />
@@ -96,7 +96,7 @@ const PROJECTS: Project[] = [
     techs: ['Automation', 'N8N', 'Python', 'Web Scrape'],
     category: 'automation',
     github: 'https://github.com/Aruthra07/Automation-Workflows',
-    demo: 'https://aruthra785portfolio.my.canva.site',
+    demo: '#',
     icon: (
       <svg className="w-8 h-8 text-yellow-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
@@ -111,7 +111,7 @@ const PROJECTS: Project[] = [
     techs: ['Tableau', 'Python', 'Data Viz', 'SQL'],
     category: 'ai',
     github: 'https://github.com/Aruthra07/AI-Analytics-Dashboard',
-    demo: 'https://aruthra785portfolio.my.canva.site',
+    demo: '#',
     icon: (
       <svg className="w-8 h-8 text-accentBlue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M18 20V10M12 20V4M6 20v-6M3 20h18" />

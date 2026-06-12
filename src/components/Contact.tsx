@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Globe, MapPin, Send, CheckCircle2 } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
 
 interface ContactProps {
   playAudio: (type: 'hover' | 'click') => void;
@@ -73,13 +73,6 @@ export const Contact: React.FC<ContactProps> = ({ playAudio }) => {
                 value: 'github.com/Aruthra07',
                 href: 'https://github.com/Aruthra07',
                 color: 'linear-gradient(135deg, #333333, #111111)'
-              },
-              {
-                icon: <Globe className="w-5 h-5" />,
-                label: 'Canva Portfolio',
-                value: 'aruthra785portfolio.my.canva.site',
-                href: 'https://aruthra785portfolio.my.canva.site',
-                color: 'linear-gradient(135deg, #06b6d4, #3b82f6)'
               }
             ].map((link, idx) => (
               <a

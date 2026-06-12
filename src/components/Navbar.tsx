@@ -136,7 +136,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Resume Download (Desktop) */}
           <a
-            href="https://drive.google.com/file/d/1RN87HSbJbbLVsGDfqpd0RxK0JllZZrYx/view"
+            href={import.meta.env.BASE_URL + "poftfolio images/Updated_Resume.pdf"}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => playAudio('click')}
@@ -199,7 +199,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               </a>
             ))}
             <a
-              href="https://drive.google.com/file/d/1RN87HSbJbbLVsGDfqpd0RxK0JllZZrYx/view"
+              href={import.meta.env.BASE_URL + "poftfolio images/Updated_Resume.pdf"}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => {

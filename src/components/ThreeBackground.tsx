@@ -69,7 +69,7 @@ function ParticleSystem() {
 
 export const ThreeBackground: React.FC = () => {
   return (
-    <div className="fixed inset-0 -z-10 w-full h-full pointer-events-none select-none overflow-hidden bg-[#030612] transition-colors duration-500 light:bg-[#f4f6fc]">
+    <div className="fixed inset-0 -z-10 w-full h-full pointer-events-none select-none overflow-hidden bg-transparent transition-colors duration-500">
       <Canvas camera={{ position: [0, 0, 5], fov: 60 }} dpr={[1, 1.3]}>
         <ParticleSystem />
       </Canvas>

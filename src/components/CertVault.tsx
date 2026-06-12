@@ -26,8 +26,8 @@ const CERTIFICATES: Certificate[] = [
     providerCode: 'aws',
     date: 'Earned 2025',
     iconClass: 'fab fa-aws text-orange-400',
-    image: '/poftfolio images/AWS_Cert.png',
-    link: 'https://drive.google.com/file/d/1L8xuoN8dVhhzxFm3b7bDjfFQGKXBkDj-/view',
+    image: import.meta.env.BASE_URL + 'poftfolio images/AWS_Cert.png',
+    link: import.meta.env.BASE_URL + 'poftfolio images/AWS_Cert.pdf',
     credentialId: 'AWS-CCP-2025-9981'
   },
   {
@@ -37,8 +37,8 @@ const CERTIFICATES: Certificate[] = [
     providerCode: 'snowflake',
     date: 'Earned 2025',
     iconClass: 'fas fa-snowflake text-sky-400',
-    image: '/poftfolio images/Snowflake_Cert.png',
-    link: 'https://drive.google.com/file/d/1RH_zjvVQDkDaGCOUnpq28PO7KlWgYfk4/view',
+    image: import.meta.env.BASE_URL + 'poftfolio images/Snowflake_Cert.png',
+    link: import.meta.env.BASE_URL + 'poftfolio images/Snowflake_Cert.pdf',
     credentialId: 'SF-SNOWPRO-CORE-1025'
   },
   {
@@ -48,8 +48,8 @@ const CERTIFICATES: Certificate[] = [
     providerCode: 'salesforce',
     date: 'Earned 2025',
     iconClass: 'fas fa-cloud text-blue-400',
-    image: '/poftfolio images/Salesforce_Cert.png',
-    link: 'https://drive.google.com/file/d/1Ohqh3oWiKBrpl9dsy0NavxYIuNbCQciA/view',
+    image: import.meta.env.BASE_URL + 'poftfolio images/Salesforce_Cert.png',
+    link: import.meta.env.BASE_URL + 'poftfolio images/Salesforce_Cert.pdf',
     credentialId: 'SF-AG-SPECIALIST-3849'
   },
   {
@@ -59,8 +59,8 @@ const CERTIFICATES: Certificate[] = [
     providerCode: 'servicenow',
     date: 'Earned 2025',
     iconClass: 'fas fa-cogs text-green-500',
-    image: '/poftfolio images/ServiceNow_Cert.png',
-    link: 'https://drive.google.com/file/d/1xje33FYZ4tHF8cH-fS92ILkwheV9xu9O/view',
+    image: import.meta.env.BASE_URL + 'poftfolio images/ServiceNow_Cert.png',
+    link: import.meta.env.BASE_URL + 'poftfolio images/ServiceNow_Cert.pdf',
     credentialId: 'SN-CSA-2025-0982'
   },
   {
@@ -70,8 +70,8 @@ const CERTIFICATES: Certificate[] = [
     providerCode: 'oracle',
     date: 'Earned 2025',
     iconClass: 'fas fa-database text-red-500',
-    image: '/poftfolio images/Oracle_Cert.png',
-    link: 'https://drive.google.com/file/d/1qLRRkv32_hn_U-KghWkgFvaoaCX3qfF-/view',
+    image: import.meta.env.BASE_URL + 'poftfolio images/Oracle_Cert.png',
+    link: import.meta.env.BASE_URL + 'poftfolio images/Oracle_Cert.pdf',
     credentialId: 'OCI-ASSOCIATE-2025-7763'
   },
   {
@@ -81,8 +81,8 @@ const CERTIFICATES: Certificate[] = [
     providerCode: 'oracle',
     date: 'Earned 2025',
     iconClass: 'fas fa-brain text-purple-400',
-    image: '/poftfolio images/oracle/eCertificate.png',
-    link: 'https://drive.google.com/file/d/1qLRRkv32_hn_U-KghWkgFvaoaCX3qfF-/view',
+    image: import.meta.env.BASE_URL + 'poftfolio images/oracle/eCertificate.png',
+    link: import.meta.env.BASE_URL + 'poftfolio images/oracle/eCertificate.pdf',
     credentialId: 'OCI-GENAI-PRO-1102'
   },
   {
@@ -92,8 +92,8 @@ const CERTIFICATES: Certificate[] = [
     providerCode: 'others',
     date: 'Earned 2024',
     iconClass: 'fab fa-google text-red-400',
-    image: '/poftfolio images/Bootcamp.png',
-    link: 'https://www.linkedin.com/posts/aruthra-sm_cybersecurity-digitalforensics-memoryforensics-activity-7311772796945055745-MYl9',
+    image: import.meta.env.BASE_URL + 'poftfolio images/Bootcamp.png',
+    link: import.meta.env.BASE_URL + 'poftfolio images/Bootcamp.pdf',
     credentialId: 'GCP-BOOTCAMP-2024'
   },
   {
@@ -103,7 +103,7 @@ const CERTIFICATES: Certificate[] = [
     providerCode: 'others',
     date: 'Earned 2024',
     iconClass: 'fas fa-chart-line text-blue-500',
-    image: '/poftfolio images/course era.png',
+    image: import.meta.env.BASE_URL + 'poftfolio images/course era.png',
     link: 'https://www.linkedin.com/posts/aruthra-sm_uiuxdesign-creativebootcamp-designthinking-activity-7353812593477668870-Bzpg',
     credentialId: 'COURSERA-DA-FOUND'
   }

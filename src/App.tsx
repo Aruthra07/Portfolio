@@ -14,6 +14,7 @@ import { Contact } from './components/Contact';
 import { AIAssistant } from './components/AIAssistant';
 import { VideoResume } from './components/VideoResume';
 import { EventsJourney } from './components/EventsJourney';
+import { Articles } from './components/Articles';
 import { LeadershipHighlights } from './components/LeadershipHighlights';
 
 function App() {
@@ -138,6 +139,9 @@ function App() {
         <div className="w-[85%] h-[1px] bg-gradient-to-r from-transparent via-accentPurple/25 to-transparent my-6" />
 
         <EventsJourney playAudio={playAudio} />
+        <div className="w-[85%] h-[1px] bg-gradient-to-r from-transparent via-accentPurple/25 to-transparent my-6" />
+
+        <Articles playAudio={playAudio} />
         <div className="w-[85%] h-[1px] bg-gradient-to-r from-transparent via-accentPurple/25 to-transparent my-6" />
 
         <LeadershipHighlights playAudio={playAudio} />

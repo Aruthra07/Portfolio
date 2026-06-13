@@ -54,7 +54,7 @@ const SKILL_CATEGORIES: SkillCategory[] = [
     id: 'tools',
     name: 'Tools & DB',
     iconClass: 'fas fa-tools',
-    skills: ['GitHub', 'GCP', 'Excel', 'Tableau', 'MySQL'],
+    skills: ['GitHub', 'Canva', 'Excel', 'Tableau', 'MySQL'],
     color: '#ec4899',
     radius: 3.7,
     speed: 0.015,

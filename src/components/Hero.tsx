@@ -20,10 +20,13 @@ export const Hero: React.FC<HeroProps> = ({ playAudio }) => {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const phrases = [
-    "Building Solutions.",
-    "Inspiring People.",
-    "Exploring Possibilities.",
-    "Creating Impact."
+    "Hi, I'm Aruthra S M",
+    "Technology Enthusiast",
+    "AI Explorer",
+    "Community Leader",
+    "Public Speaker",
+    "Content Writer",
+    "CEO, DotEco"
   ];
 
   // Typing effect

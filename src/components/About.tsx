@@ -74,7 +74,7 @@ export const About: React.FC<AboutProps> = ({ playAudio }) => {
           >
             <motion.div
               style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
-              className="w-full h-full glass-card rounded-[2.5rem] flex flex-col items-center justify-center relative shadow-2xl overflow-hidden border border-glass-border group aspect-square flex-shrink-0"
+              className="w-full h-full rounded-full flex flex-col items-center justify-center relative shadow-[0_0_40px_rgba(139,92,246,0.15)] overflow-hidden group aspect-square flex-shrink-0"
             >
               {/* Outer Orbit Rings (spinning rounded halos) */}
               <div className="absolute inset-2 border border-dashed border-accentPurple/30 rounded-[2.2rem] animate-spin-clockwise pointer-events-none" />
@@ -85,11 +85,11 @@ export const About: React.FC<AboutProps> = ({ playAudio }) => {
               <div className="absolute w-32 h-32 bg-accentPurple/20 blur-[40px] rounded-full bottom-1/4 right-1/4 group-hover:scale-125 transition-transform duration-500" />
 
               {/* Profile Photo */}
-              <div className="absolute inset-3.5 z-10 rounded-[2rem] overflow-hidden aspect-square flex-shrink-0 bg-[#070b1a]/20 border border-white/5 group-hover:border-accentCyan/20 transition-all duration-300">
+              <div className="absolute inset-2 md:inset-4 z-10 rounded-full overflow-hidden aspect-square flex-shrink-0 bg-bgSecondary border-[3px] border-white/10 group-hover:border-accentCyan/40 shadow-[0_0_30px_rgba(139,92,246,0.3)] transition-all duration-500">
                 <img
-                  src="/poftfolio images/my_photo[1].jpg"
+                  src={import.meta.env.BASE_URL + "poftfolio images/my_photo[1].jpg"}
                   alt="Aruthra S M Portrait"
-                  className="w-full h-full object-cover select-none transform group-hover:scale-105 transition-transform duration-500 aspect-square flex-shrink-0"
+                  className="w-full h-full object-cover object-top select-none transform group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
             </motion.div>
@@ -112,17 +112,36 @@ export const About: React.FC<AboutProps> = ({ playAudio }) => {
         {/* Right Column: Bio Story & Performance Bars */}
         <div className="lg:col-span-7 flex flex-col gap-6 text-textSecondary font-sans">
           <p className="text-sm md:text-base leading-relaxed">
-            I'm <strong className="text-textPrimary">Aruthra S M</strong>, an Electronics & Communication Engineering student at SNS College of Engineering with an <strong className="text-accentCyan">8.8 CGPA</strong>. I am passionate about transforming ideas into impact through technology, leadership, and communication.
+            I believe that true innovation happens at the intersection of technology and human connection. As an Electronics & Communication Engineering student with an <strong className="text-accentCyan">8.8 CGPA</strong>, my focus extends far beyond writing code—I am driven by a passion to build communities, lead teams, and communicate complex ideas effectively.
           </p>
           <p className="text-sm md:text-base leading-relaxed">
-            My journey blends <strong className="text-textPrimary">technical depth</strong> with <strong className="text-textPrimary">human connection</strong> — from exploring AI, cloud platforms, and automation tools to building communities, hosting events, and empowering others through public speaking and content creation.
-          </p>
-          <p className="text-sm md:text-base leading-relaxed">
-            As CEO of <strong className="text-textPrimary">DotEco</strong> and an active participant in Microsoft, AWS, and Oracle communities, I bring a rare combination of engineering rigor, entrepreneurial mindset, and communication prowess — bridging business management and technology across global ecosystems.
+            My expertise lies in blending <strong className="text-textPrimary">technical exploration</strong> with <strong className="text-textPrimary">leadership</strong>. Whether I'm diving into AI and cloud architectures, managing technical events, or delivering a public speech, my goal is always to empower others and create meaningful, scalable solutions. Continuous learning is not just a habit for me; it's the foundation of my journey.
           </p>
 
+          {/* Current Positions */}
+          <div className="mt-4 p-5 rounded-2xl bg-white/5 border border-glass-border">
+            <h3 className="text-sm font-bold text-textPrimary uppercase tracking-wider mb-4 flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-accentPurple" /> Current Roles
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                { role: "CEO", org: "DotEco", color: "text-green-400" },
+                { role: "Student Ambassador", org: "Microsoft Learn", color: "text-blue-400" },
+                { role: "Community Member", org: "AWS", color: "text-orange-400" },
+                { role: "Community Participant", org: "Oracle", color: "text-red-400" },
+                { role: "Content Writer", org: "Freelance", color: "text-purple-400" },
+                { role: "Public Speaker", org: "Events & Tech Conferences", color: "text-pink-400" }
+              ].map((item, idx) => (
+                <div key={idx} className="flex flex-col">
+                  <span className={`text-xs font-bold ${item.color}`}>{item.role}</span>
+                  <span className="text-xs text-textSecondary">{item.org}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Competency Bars */}
-          <div className="flex flex-col gap-4 mt-4">
+          <div className="flex flex-col gap-4 mt-2">
             {SKILL_BARS.map((bar, idx) => (
               <div key={idx} className="flex flex-col gap-1.5">
                 <div className="flex justify-between items-center text-xs font-semibold">

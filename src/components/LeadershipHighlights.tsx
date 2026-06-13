@@ -32,7 +32,7 @@ const COMMUNITY_ITEMS: HighlightItem[] = [
   },
   {
     id: 'aws-advocate',
-    title: 'AWS Cloud Advocate & Educator',
+    title: 'AWS Cloud Community & Educator',
     subtitle: 'Developer Community Group',
     desc: 'Conducted study tracks helping over 50+ students achieve AWS Cloud Practitioner credentials. Created detailed architecture review cheatsheets for developer peers.',
     date: '2024 - Present',

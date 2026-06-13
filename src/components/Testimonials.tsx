@@ -1,106 +1,97 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Quote } from 'lucide-react';
+import { Trophy, Star, Target, ShieldCheck } from 'lucide-react';
 
 interface TestimonialsProps {
   playAudio: (type: 'hover' | 'click') => void;
 }
 
-interface Testimonial {
-  name: string;
-  role: string;
+interface Milestone {
+  title: string;
   org: string;
-  text: string;
-  avatar: string;
+  desc: string;
+  icon: React.ReactNode;
+  color: string;
 }
 
-const TESTIMONIALS: Testimonial[] = [
+const MILESTONES: Milestone[] = [
   {
-    name: 'Dr. Rajesh Kumar',
-    role: 'Head of ECE Department',
-    org: 'SNS College of Engineering',
-    text: 'Aruthra stands out for her academic dedication and project engineering capabilities. Maintaining an 8.8 CGPA while managing CEO tasks for DotEco proves her outstanding planning abilities.',
-    avatar: '👨‍🏫'
+    title: 'CEO & Founder',
+    org: 'DotEco',
+    desc: 'Leading a green technology initiative focused on sustainable solutions, driving enterprise growth, managing strategic partnerships, and overseeing technical product development from ideation to launch.',
+    icon: <Target className="w-8 h-8" />,
+    color: 'text-green-400'
   },
   {
-    name: 'Sarah Jenkins',
-    role: 'MLSA Community Director',
-    org: 'Microsoft India Student Branch',
-    text: 'Organizing Azure training camps and webinars across colleges, Aruthra has proven her capability as an outstanding public communicator and technology leader. She knows how to inspire teams.',
-    avatar: '👩‍💼'
+    title: 'Microsoft Learn Student Ambassador',
+    org: 'Microsoft',
+    desc: 'Empowering fellow students through technical workshops, Azure training sessions, and AI/ML seminars. Fostering a continuous learning environment within the campus ecosystem.',
+    icon: <Star className="w-8 h-8" />,
+    color: 'text-blue-400'
   },
   {
-    name: 'Nikhil Sharma',
-    role: 'AWS Community Lead',
-    org: 'AWS Cloud Group India',
-    text: 'Aruthra excels at translating cloud architectures into digestible learning guides. Her commitment to helping her classmates succeed and earn technical cloud credentials is highly commendable.',
-    avatar: '👨‍💻'
+    title: 'AWS Cloud Community Member',
+    org: 'Amazon Web Services',
+    desc: 'Actively participating in AWS community programs. Mentoring peers in cloud architecture fundamentals and guiding them toward achieving foundational cloud certifications.',
+    icon: <ShieldCheck className="w-8 h-8" />,
+    color: 'text-orange-400'
   },
   {
-    name: 'Lisa Mueller',
-    role: 'Global ESG Project Partner',
-    org: 'DotEco Sustainability Initiative',
-    text: 'Working beside Aruthra on sustainability events has shown me her corporate maturity. She possesses a rare mixture of engineering rigor, entrepreneurial foresight, and strategic communication skills.',
-    avatar: '👩‍🔬'
+    title: 'Oracle Community Participant',
+    org: 'Oracle',
+    desc: 'Engaged with Oracle technical forums, participating in discussions around enterprise cloud scaling, database management, and implementing Generative AI within business models.',
+    icon: <Trophy className="w-8 h-8" />,
+    color: 'text-red-400'
   }
 ];
 
 export const Testimonials: React.FC<TestimonialsProps> = ({ playAudio }) => {
-  // We duplicate the list to make a seamless infinite loop scroll marquee
-  const marqueeItems = [...TESTIMONIALS, ...TESTIMONIALS];
-
   return (
-    <section id="testimonials" className="py-24 overflow-hidden relative z-10 w-full">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-2 mb-10 text-center md:text-left">
+    <section id="leadership" className="py-24 px-6 md:px-12 max-w-7xl mx-auto relative z-10 w-full">
+      <div className="flex flex-col gap-2 mb-12 text-center md:text-left">
         <span className="text-xs font-bold uppercase tracking-[0.25em] bg-gradient-main bg-clip-text text-transparent">
-          Endorsements
+          Professional Impact
         </span>
-        <h2 className="text-3xl md:text-5xl font-black font-display tracking-tight text-white">
-          Faculty & Peer <span className="bg-gradient-main bg-clip-text text-transparent">Testimonials</span>
+        <h2 className="text-3xl md:text-5xl font-black font-display tracking-tight text-textPrimary">
+          Leadership <span className="bg-gradient-main bg-clip-text text-transparent">Milestones</span>
         </h2>
         <p className="text-textSecondary text-sm md:text-base max-w-2xl mt-2 leading-relaxed">
-          Recommendations from college professors, technical community mentors, and sustainability partners.
+          Highlighting key community contributions, leadership roles, and ecosystem engagements across global tech networks.
         </p>
       </div>
 
-      {/* Infinite Horizontal Scroll Marquee */}
-      <div className="flex w-full overflow-hidden mask-gradient-horizontal select-none">
-        <motion.div
-          animate={{ x: [0, -1400] }}
-          transition={{
-            x: {
-              repeat: Infinity,
-              repeatType: 'loop',
-              duration: 25,
-              ease: 'linear'
-            }
-          }}
-          className="flex gap-6 pr-6 whitespace-nowrap min-w-max"
-        >
-          {marqueeItems.map((item, idx) => (
-            <div
-              key={idx}
-              onMouseEnter={() => playAudio('hover')}
-              className="glass-card w-[350px] md:w-[420px] p-6 md:p-8 rounded-3xl border border-glass-border flex flex-col justify-between whitespace-normal group"
-            >
-              <div className="mb-6 flex gap-3 items-start justify-between">
-                <Quote className="w-8 h-8 text-accentPurple/25 transform group-hover:rotate-12 transition-transform duration-300" />
-                <span className="text-3xl select-none">{item.avatar}</span>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {MILESTONES.map((milestone, idx) => (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: idx * 0.1 }}
+            key={idx}
+            onMouseEnter={() => playAudio('hover')}
+            className="glass-card p-8 rounded-3xl border border-glass-border flex flex-col group hover:-translate-y-2 transition-transform duration-500"
+          >
+            <div className={`mb-6 flex gap-4 items-center ${milestone.color}`}>
+              <div className="p-3 bg-white/5 rounded-2xl border border-glass-border group-hover:scale-110 transition-transform duration-300">
+                {milestone.icon}
               </div>
-
-              <p className="text-xs md:text-sm text-textSecondary italic leading-relaxed mb-6">
-                "{item.text}"
-              </p>
-
-              <div className="pt-4 border-t border-glass-border">
-                <h4 className="text-sm font-bold text-white">{item.name}</h4>
-                <p className="text-[10px] md:text-xs text-textMuted font-medium uppercase mt-0.5">
-                  {item.role} &middot; <span className="text-accentCyan">{item.org}</span>
-                </p>
+              <div>
+                <h3 className="text-xl font-bold text-textPrimary">{milestone.title}</h3>
+                <span className="text-xs font-bold uppercase tracking-wider">{milestone.org}</span>
               </div>
             </div>
-          ))}
-        </motion.div>
+
+            <p className="text-sm text-textSecondary leading-relaxed flex-1">
+              {milestone.desc}
+            </p>
+
+            <div className="mt-6 pt-4 border-t border-glass-border">
+              <span className="text-[10px] text-textMuted uppercase font-mono font-bold tracking-widest group-hover:text-accentCyan transition-colors">
+                Verified Engagement
+              </span>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

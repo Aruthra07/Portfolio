@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+:root {
+  --bg-primary: #F5F3FF; /* Soft Lavender Background */
+  --bg-secondary: #FFFFFF; /* Pure White */
+  --text-primary: #0F172A; /* Deep Navy */
+  --text-secondary: #334155; /* Slate */
+  --text-muted: #64748B; /* Muted Slate */
+  --accent-blue: #2563EB; /* Primary Blue */
+  --accent-highlight: #8B5CF6; /* Lavender Accent */
+  --border-silver: #DDD6FE; /* Soft Lavender Border */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(139, 92, 246, 0.1);
+}
+
+:root.dark {
+  --bg-primary: #0F172A; /* Deep Navy Background */
+  --bg-secondary: #1E293B; /* Darker Slate/Navy Card Background */
+  --text-primary: #F8FAFC; /* Slate-White Text */
+  --text-secondary: #CBD5E1; /* Highly readable Light Gray Text */
+  --text-muted: #94A3B8; /* High-contrast Accessible Muted Text */
+  --accent-blue: #2563EB; /* Primary Blue */
+  --accent-highlight: #A78BFA; /* Soft Lavender Accent (Dark) */
+  --border-silver: #334155; /* Slate Border */
+  --glass-bg: rgba(15, 23, 42, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Compact section padding overrides to increase content density and reduce scrolling */
+section {
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+}
+#hero {
+  padding-top: 5rem !important;
+  padding-bottom: 4rem !important;
+}
+
+/* Custom selection */
+::selection {
+  background: rgba(37, 99, 235, 0.2);
+  color: var(--text-primary);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-silver);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Glassmorphism custom classes */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+}
